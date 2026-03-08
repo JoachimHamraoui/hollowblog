@@ -1,0 +1,14 @@
+name: HOLLOW Blog Theme
+type: theme
+description: Custom theme for HOLLOW Blog.
+core_version_requirement: ^11
+base theme: false
+
+libraries:
+  - mytheme/global
+
+regions:
+  header: Header
+  navigation: Navigation
+  content: Content
+  footer: Footer
