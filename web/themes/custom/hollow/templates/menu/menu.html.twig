@@ -26,18 +26,21 @@
   We call a macro which calls itself to render the full tree.
   https://twig.symfony.com/doc/3.x/tags/macro.html
 #}
-{{ menus.menu_links(items, attributes, 0) }}
+
+
+<nav class="navbar">
+  {{ menus.menu_links(items, attributes, 0) }}
 
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes }}>
+      <ul class="navbar__list" {{ attributes }}>
     {% else %}
-      <ul>
+      <ul class="navbar__list navbar__sublist">
     {% endif %}
     {% for item in items %}
-      <li{{ item.attributes }}>
+      <li class="navbar__link" {{ item.attributes }}>
         {{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
@@ -47,3 +50,4 @@
     </ul>
   {% endif %}
 {% endmacro %}
+</nav>
