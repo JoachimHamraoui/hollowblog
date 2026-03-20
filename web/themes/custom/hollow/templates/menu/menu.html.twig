@@ -36,6 +36,9 @@
   {% if items %}
     {% if menu_level == 0 %}
       <ul class="navbar__list" {{ attributes }}>
+      <div class="navbar__logocontainer">
+        <img class="navbar__logo" src="{{ base_path ~ 'themes/custom/hollow/images/hollow.png' }}">
+      </div>
     {% else %}
       <ul class="navbar__list navbar__sublist">
     {% endif %}
