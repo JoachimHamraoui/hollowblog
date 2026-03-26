@@ -1,9 +1,10 @@
-/* LAYOUT */
-@import 'layout/body';
-
 /* ABSTRACTS */
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
+
+/* LAYOUT */
+@import 'layout/body';
+@import 'layout/views';
 
 /* BASE */
 @import 'base/reset';
