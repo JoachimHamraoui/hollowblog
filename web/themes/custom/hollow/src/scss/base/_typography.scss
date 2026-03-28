@@ -58,7 +58,20 @@ h1 {
     color: red;
 }
 
+h2 {
+    font-family: $font-primary;
+    font-weight: map-get($font-weights, bold);
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 1.5rem 0;
+}
+
 li a {
     font-family: $font-primary;
     font-weight: map-get($font-weights, regular);
+}
+
+p {
+  font-family: $font-primary;
+  font-weight: map-get($font-weights, regular);
 }
